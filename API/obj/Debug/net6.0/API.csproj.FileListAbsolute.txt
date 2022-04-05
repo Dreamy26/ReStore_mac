@@ -52,3 +52,6 @@
 /Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/Microsoft.Extensions.Configuration.UserSecrets.dll
+/Users/dreamy/AW_Code/ReStore/API/bin/Debug/net6.0/Microsoft.Extensions.Hosting.dll
