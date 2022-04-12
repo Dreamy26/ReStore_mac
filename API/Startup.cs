@@ -39,6 +39,7 @@ namespace API
             {
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddCors(); // Adding CORS
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,10 +52,13 @@ namespace API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
 
-            //app.UseHttpsRedirection(); will not be redirected to HTTPS
-
+            // app.UseHttpsRedirection(); will not be redirected to HTTPS
+            // pay attention to the order of the middlewares
             app.UseRouting();
-
+            app.UseCors(opt =>
+            {
+                opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+            });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => // mapping the endpoints
