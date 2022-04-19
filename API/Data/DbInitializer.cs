@@ -9,7 +9,7 @@ namespace API.Data
 
 public static class DbInitializer // no instance needed
 {
-    public static void Initialize(StoreContext context)
+    public static void Initialize(StoreContext context, Microsoft.AspNetCore.Identity.UserManager<User> userManager)
     {
         if(context.Products.Any())
         
@@ -220,6 +220,11 @@ public static class DbInitializer // no instance needed
          }
          
          context.SaveChanges();    
+        }
+
+        internal static Task<object> Initialize(StoreContext context, Microsoft.AspNetCore.Identity.UserManager<User> userManager)
+        {
+            throw new NotImplementedException();
         }
     }
 }
